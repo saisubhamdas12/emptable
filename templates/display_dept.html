@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>dept</h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <table border="3px">
+            <tr>
+                <td><label for="dept">deptno</label></td>
+                <td><input type="text" name="dept" id="dept"></td>
+            </tr>
+            <tr>
+                <td><label for="dept">dname</label></td>
+                <td><input type="text" name="dept1" id="dept"></td>
+            </tr>
+            <tr>
+                <td><label for="dept">loc</label></td>
+                <td><input type="text" name="dept2" id="dept"></td>
+            </tr>
+    
+        </table><br>
+
+        <input type="submit">
+    </form>
+    </center>
+</body>
+</html>

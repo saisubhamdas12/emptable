@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>emp_table</h1>
+    <form action="" method="POST" >
+        {% csrf_token %}
+        <table border="3px">
+            <tr>
+                <td><label for="emp">empno</label></td>
+                <td><input type="text" name="emp" id="emp"></td>
+            </tr>
+            <tr>
+                <td><label for="emp">ename</label></td>
+                <td><input type="text" name="emp1" id="emp"></td>
+            </tr>
+            <tr>
+                <td><label for="emp">job</label></td>
+                <td><input type="text" name="emp2" id="emp"></td>
+            </tr>
+            <tr>
+                <td><label for="emp">hiredate</label></td>
+                <td><input type="text" name="emp3" id="emp"></td>
+            </tr>
+            <tr>
+                <td><label for="emp">sal</label></td>
+                <td><input type="text" name="emp4" id="emp"></td>
+            </tr>
+            <tr>
+                <td><label for="emp">comm</label></td>
+                <td><input type="text" name="emp5" id="emp"></td>
+            </tr>
+            <tr>
+                <td><label for="emp">deptno</label></td>
+                <td><select name="deptno" id="deptno" multiple>
+                    {% for i in ldo %}
+                        <option value="{{ i.deptno}}" name="deptno" id="deptno">{{i.deptno}}</option>
+                    {% endfor %}
+                </select></td>
+            </tr>
+    
+        </table><br>
+
+        <input type="submit">
+    </form>
+    </center>
+</body>
+</html>
